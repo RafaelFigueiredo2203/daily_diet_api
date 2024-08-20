@@ -11,8 +11,20 @@ datasource db {
 }
 
 model User {
-  id       String @id @default(uuid())
+  id       String  @id @default(uuid())
   name     String
-  email    String @unique
+  email    String  @unique
   password String
+  Snack    Snack[]
+}
+
+model Snack {
+  id          String    @id @default(uuid())
+  name        String
+  description String
+  createdAt   DateTime  @default(now())
+  isDiet      Boolean
+  updatedAt   DateTime?
+  User        User      @relation(fields: [userId], references: [id])
+  userId      String
 }
