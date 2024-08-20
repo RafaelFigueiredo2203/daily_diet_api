@@ -1,0 +1,26 @@
+{
+  "name": "daily-diet-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src --out-dir build",
+    "dev": "tsx watch  src/index.ts",
+    "lint": "eslint src --ext .ts --fix"
+  },
+  "author": "raafael",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "@types/node": "^22.4.1",
+    "fastify": "^4.28.1",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "eslint": "^8.57.0",
+    "prisma": "^5.18.0"
+  }
+}
